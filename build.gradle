@@ -7,3 +7,20 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//Construir todo el proyecto en el directorio temporal
+allproyects{
+    def YEAR-WEEK   = new Date().format("yyww").toInteger()
+    def DAY         = new Date().format("y").toInteger()
+    def HOUR_MINUTE = new Date().format("HHmm").toInteger()
+
+    //El timestamp
+    def BUILD-TIMESTANP = 100000 * YEAR_WEEK + 10000 * DAY + HOUR_NIMUTE
+
+    // Sematic Versioning
+    def MAJOR:Integer = 1
+    def MINOR:Integer = 0
+    def PATCH = BUILD_TIMESTAMP
+
+    // nome of animals
+}
